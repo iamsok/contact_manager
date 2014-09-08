@@ -5,3 +5,19 @@
     <li><%= contact.name %> - <%= contact.phone_number %></li>
   <% end %>
 </ul>
+
+
+
+<% if !on_first_page?(@page_num) %>
+<a href = "/?page=<%= @page_num - 1 %>">Previous</a>
+<% end %>
+
+
+
+
+<% if not_last_page?(@page_num) %>
+<a href = "/?page=<%= @page_num + 1 %>">Next</a>
+<%end%>
+
+
+
